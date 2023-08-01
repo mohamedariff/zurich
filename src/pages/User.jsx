@@ -35,19 +35,17 @@ function User() {
       {isLoading ? (
         <h4>Loading..</h4>
       ) : (
-        filteredName.map(
-          ({ id, avatar, email, first_name, last_name }, index) => {
-            return (
-              <Avatar
-                key={`${id}_${index}`}
-                email={email}
-                avatar={avatar}
-                last_name={last_name}
-                first_name={first_name}
-              />
-            );
-          }
-        )
+        filteredName.map((user, index) => {
+          return (
+            <Avatar
+              key={`${user.id}_${index}`}
+              style={{ marginRight: 10 }}
+              height={45}
+              width={45}
+              {...user}
+            />
+          );
+        })
       )}
     </Layout>
   );

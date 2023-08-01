@@ -8,8 +8,8 @@ function Layout({ children }) {
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
           alignItems: "center",
+          flexDirection: "column",
         }}
       >
         {children}

@@ -1,4 +1,18 @@
-function Avatar({ avatar, email, first_name, last_name }) {
+import { memo } from "react";
+
+function Avatar(props) {
+  const {
+    avatar,
+    email,
+    first_name,
+    last_name,
+    width,
+    height,
+    style,
+    picture,
+    nickname,
+  } = props;
+
   return (
     <div
       style={{
@@ -8,11 +22,11 @@ function Avatar({ avatar, email, first_name, last_name }) {
       }}
     >
       <img
-        width={45}
-        height={45}
-        src={avatar}
-        alt={email}
-        style={{ borderRadius: 25, marginRight: 10 }}
+        style={{ borderRadius: width / 2, ...style }}
+        height={height}
+        width={width}
+        src={picture || avatar}
+        alt={email || nickname}
       />
       <p>
         {first_name} {last_name}
@@ -21,4 +35,4 @@ function Avatar({ avatar, email, first_name, last_name }) {
   );
 }
 
-export default Avatar;
+export default memo(Avatar);

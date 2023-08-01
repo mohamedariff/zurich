@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
+import Avatar from "./Avatar";
+
 function Header() {
   const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
 
@@ -53,17 +55,7 @@ function Header() {
         >
           User
         </Link>
-
-        {isAuthenticated && (
-          <img
-            width={45}
-            height={45}
-            src={user.picture}
-            alt={user.nickname}
-            style={{ borderRadius: 25 }}
-          />
-        )}
-
+        {isAuthenticated && <Avatar width={35} height={35} {...user} />}
         {isAuthenticated ? (
           <button onClick={handleLogout}>Log Out</button>
         ) : (
