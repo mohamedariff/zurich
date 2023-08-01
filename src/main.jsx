@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import { Auth0Provider } from "@auth0/auth0-react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import Home from "./pages/home.jsx";
+import Home from "./pages/Home.jsx";
 import User from "./pages/User.jsx";
 import ErrorPage from "./pages/Error.jsx";
 
