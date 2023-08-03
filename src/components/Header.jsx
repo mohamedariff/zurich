@@ -11,11 +11,6 @@ function Header() {
   const handleLogout = () =>
     logout({ logoutParams: { returnTo: window.location.origin } });
 
-  /* 
-    username: abc@test.com
-    password: P@assword
-  */
-
   return (
     <div
       style={{
