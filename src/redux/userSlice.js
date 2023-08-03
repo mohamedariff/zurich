@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const url = "https://reqres.in/api/users";
+const url = import.meta.env.VITE_API_URL;
 
 export const fetchUsers = createAsyncThunk("user/fetchUsers", (page) => {
   return axios.get(url, { params: { page } });
