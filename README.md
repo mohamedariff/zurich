@@ -38,3 +38,34 @@ function ProtectedRoute({ children }) {
   return children;
 }
 ```
+
+or
+
+create different stack of navigation for logged in user or non logged in user.
+
+```
+const publicRoutes = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <ErrorPage />,
+  }
+]);
+
+const privateRoutes = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/user",
+    element: (
+      <ProtectedRoute>
+        <User />,
+      </ProtectedRoute>
+    ),
+    errorElement: <ErrorPage />,
+  },
+]);
+```
