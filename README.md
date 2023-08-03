@@ -6,7 +6,14 @@
 - deploys automatically to a CDN
 - its a managed service
 
-2. To protect a route or prevent unauthorized access to a certain page, i create a <PrivateRoute> or <ProtectedRoute> component that checks if user is logged in. if not, it will redirect to public route. With proper/strict condition, a route/site can be safe from unauthorized access.
+2. API - Your proposal on making secure API calls from the browser
+
+- after logged in, use the token and pass the jwt token in the header for each API call.
+- make sure the jwt is still valid
+
+3. Security – secure the home page from unauthorized access
+
+- To protect a route or prevent unauthorized access to a certain page, i create a <PrivateRoute> or <ProtectedRoute> component that checks if user is logged in. if not, it will redirect to public route. With proper/strict condition, a route/site can be safe from unauthorized access.
 
 ```
 function ProtectedRoute({ children }) {
