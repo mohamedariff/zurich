@@ -22,8 +22,8 @@ function Header() {
         height: 50,
         display: "flex",
         padding: "5px 20px",
-        background: "tomato",
         alignItems: "center",
+        background: "#A1CCD1",
         flexDirection: "row",
         justifyContent: "space-between",
       }}
@@ -34,7 +34,6 @@ function Header() {
           margin: 0,
           fontSize: 15,
           fontWeight: 700,
-          color: "#213547",
           textTransform: "uppercase",
         }}
       >
@@ -49,10 +48,7 @@ function Header() {
           flexDirection: "row",
         }}
       >
-        <Link
-          to={"/user"}
-          style={{ margin: 0, fontSize: 15, color: "#213547" }}
-        >
+        <Link to={"/user"} style={{ margin: 0, fontSize: 15 }}>
           User
         </Link>
         {isAuthenticated && <Avatar width={35} height={35} {...user} />}

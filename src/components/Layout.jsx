@@ -3,7 +3,14 @@ import Header from "./Header";
 
 function Layout({ children }) {
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        backgroundColor: "#F4F2DE",
+      }}
+    >
       <Header />
       <div
         style={{

@@ -8,8 +8,8 @@ export default configureStore({
     counter: counterReducer,
     user: userReducer,
   },
-  // middleware: (getDefaultMiddleware) =>
-  //   getDefaultMiddleware({
-  //     serializableCheck: false,
-  //   }),
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
