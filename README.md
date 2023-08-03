@@ -6,7 +6,7 @@
 - deploys automatically to a CDN
 - its a managed service
 
-2. Usually to protect a route or prevent unauthorized access to a certain page, we usually create a <PrivateRoute> or <ProtectedRoute> component that checks if user is logged in. if not, it will redirect to public route. With proper/strict condition, a route/site can be safe from unauthorized access.
+2. To protect a route or prevent unauthorized access to a certain page, i create a <PrivateRoute> or <ProtectedRoute> component that checks if user is logged in. if not, it will redirect to public route. With proper/strict condition, a route/site can be safe from unauthorized access.
 
 ```
 function ProtectedRoute({ children }) {

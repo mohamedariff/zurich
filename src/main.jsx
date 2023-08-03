@@ -29,13 +29,14 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
 ]);
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       <Auth0Provider
-        domain="h3kh3k.auth0.com"
         cacheLocation="localstorage"
-        clientId="ld0uxhtUSiARLVIAWRQYnINeJtTDmm2J"
+        domain={import.meta.env.VITE_AUTH0_DOMAIN}
+        clientId={import.meta.env.VITE_AUTH0_CLIENT_ID}
         authorizationParams={{ redirect_uri: window.location.origin }}
       >
         <RouterProvider router={router} />
